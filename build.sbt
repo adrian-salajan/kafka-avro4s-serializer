@@ -1,6 +1,6 @@
 name := "kafka-avro4s-serde-adapter"
 
-version := "0.1"
+version := "0.1.0"
 
 scalaVersion := "2.13.5"
 
