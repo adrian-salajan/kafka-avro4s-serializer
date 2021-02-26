@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "Person",
+  "namespace": "com.adris.serde.TestIt2",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": {
+        "type": "record",
+        "name": "Address",
+        "fields": [
+          {
+            "name": "street",
+            "type": "string"
+          },
+          {
+            "name": "number",
+            "type": "int"
+          }
+        ]
+      }
+    },
+    {
+      "name": "properties",
+      "type": {
+        "type": "map",
+        "values": "string"
+      }
+    }
+  ]
+}

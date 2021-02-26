@@ -31,9 +31,9 @@ val akkaStreamKafkaTestkit = "com.typesafe.akka" %% "akka-stream-kafka-testkit" 
 val akkaStreamTestkit = "com.typesafe.akka" %% "akka-stream-testkit" % AkkaVersion
 
 val scalactic = "org.scalactic" %% "scalactic" % "3.2.2"
-val scalatest= "org.scalatest" %% "scalatest" % "3.2.2" % "test"
+val scalatest= "org.scalatest" %% "scalatest" % "3.2.2"
 
-val testContainers = "org.testcontainers" % "testcontainers" % "1.15.2" % "test"
+val testContainers = "org.testcontainers" % "testcontainers" % "1.15.2"
 
 // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
 val slf4jApi = "org.slf4j" % "slf4j-api" % "1.7.30"
@@ -43,12 +43,13 @@ val slf4jSimple = "org.slf4j" % "slf4j-simple" % "1.7.30"
 libraryDependencies ++=Seq(
   avro4s,
   kafkaAvroSerializer,
-  akkaStreamKafkaTestkit,
-  akkaStreamTestkit,
-  scalatest,
-  scalactic,
-  testContainers,
-  slf4jApi,
-  slf4jSimple,
+
+  akkaStreamKafkaTestkit % "test",
+  akkaStreamTestkit % "test",
+  scalatest % "test",
+  scalactic % "test",
+  testContainers % "test",
+  slf4jApi % "test",
+  slf4jSimple % "test",
 
 )
