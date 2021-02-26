@@ -1,4 +1,4 @@
-package com.adris.serde
+package com.adris.kafka.serde
 
 import akka.kafka.testkit.scaladsl.ScalatestKafkaSpec
 import org.scalatest.concurrent.{ Eventually, ScalaFutures }

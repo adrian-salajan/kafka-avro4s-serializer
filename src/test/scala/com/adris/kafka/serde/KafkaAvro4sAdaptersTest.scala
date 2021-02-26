@@ -1,4 +1,4 @@
-package com.adris.serde
+package com.adris.kafka.serde
 
 import akka.Done
 import akka.kafka.scaladsl.{ Consumer, Producer }

@@ -1,4 +1,4 @@
-package com.adris.serde
+package com.adris.kafka.serde
 
 import com.sksamuel.avro4s.{ Decoder, Encoder, FromRecord, ToRecord }
 import io.confluent.kafka.serializers.{ KafkaAvroDeserializer, KafkaAvroSerializer }
@@ -39,7 +39,6 @@ object KafkaAvro4sAdapters {
 
         private val kafkaAvroDeserializer = {
           val deser = new KafkaAvroDeserializer
-//          deser.configure(config.asJava, isKey)
           deser.asInstanceOf[Deserializer[GenericRecord]]
         }
 
